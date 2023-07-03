@@ -117,16 +117,20 @@ export default function Search(){
                                         <option className="text-black" value={false}>Free</option>
                                     </Input>
                                 </FormGroup>
-                                {isSubmitted ? (
-                                    <Button type="submit" className="btn btn-primary align-self-center btn-edit" onClick={()=>{
-                                        setIsSubmited(false)
-                                        setData([])
-                                        setIsClick(false)
-                                    }}>Edit</Button>
-                                ) : (
-                                    <Button onClick={handleSubmit} className="btn btn-primary align-self-center">Cari Mobil</Button>
-                                )}
-
+                                {isClick ?
+                                    ("")
+                                     : isSubmitted ? (
+                                        <Button type="submit" className="btn btn-primary align-self-center btn-edit"
+                                                onClick={() => {
+                                                    setIsSubmited(false)
+                                                    setData([])
+                                                    setIsClick(false)
+                                                }}>Edit</Button>
+                                    ) : (
+                                        <Button onClick={handleSubmit}
+                                                className="btn btn-primary align-self-center">Cari Mobil</Button>
+                                    )
+                                }
                             </Form>
                         </Col>
                     </Row>
