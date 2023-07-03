@@ -142,7 +142,7 @@ export default function Search(){
                                 return (
                                     // <CarCard key={car.id} name={car.name} image={car.image} price={car.price} id={car.id} />
                                         <Fragment key={car.id}>
-                                            <Col md={4} className="col-md-4 m-0 p-0">
+                                            <Col md="4" className="col-md-4 m-0 p-0">
                                                 <Card className="card card-result border-1" style={{width: "21rem"}}>
                                                     <img src={car.image} className="card-img-top" alt={car.name} />
                                                     <CardBody className="card-body">
@@ -160,10 +160,10 @@ export default function Search(){
                         </Row>
                     ) : (
                         <div id="cardDetail">
-                            <div className="container">
-                                <div className="row justify-content-between"
+                            <Container className="container">
+                                <Row className="row justify-content-between"
                                      style={{width: "1047px", marginLeft: "auto", marginRight: "auto"}}>
-                                    <div className="col-md-8 m-0 p-0 detail-package">
+                                    <Col md="8" className="col-md-8 m-0 p-0 detail-package">
                                         <p className="fw-bold text-capitalize ms-3 mt-2">tentang paket</p>
                                         <p className="fw-bold text-capitalize ms-3">include</p>
                                         <ul>
@@ -200,25 +200,25 @@ export default function Search(){
                                             </li>
                                             <li className="text-secondary">Tidak termasuk akomodasi penginapan</li>
                                         </ul>
-                                    </div>
-                                    <div className="col-md-4 m-0 p-0 car-detail justify-content-end">
-                                        <div className="card card-detail border-1">
+                                    </Col>
+                                    <Col md="4" className="col-md-4 m-0 p-0 car-detail justify-content-end">
+                                        <Card className="card card-detail border-1">
                                             <img src={detailData.image} className="card-img-top" alt="..."/>
-                                            <div className="card-body">
-                                                <p className="card-type fw-bold fs-6 m-0 p-0">{detailData.name}</p>
-                                                <div className="d-flex align-items-center m-0 p-0">
+                                            <CardBody className="card-body">
+                                                <CardTitle className="card-type fw-bold fs-6 m-0 p-0">{detailData.name}</CardTitle>
+                                                <CardSubtitle className="d-flex align-items-center m-0 p-0">
                                                     <img src="/img/ic_users.svg" className="pe-2" alt=""/>
                                                     <p className="m-0 p-0 text-secondary fw-bold fs-6">{detailData.category}</p>
-                                                </div>
-                                                <div className="d-flex justify-content-between fw-bold mt-5 mb-3">
+                                                </CardSubtitle>
+                                                <CardText className="d-flex justify-content-between fw-bold mt-5 mb-3">
                                                     <p className="text-capitalize">total</p>
                                                     <p>{formatToIDR(Number(detailData.price))}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                                </CardText>
+                                            </CardBody>
+                                        </Card>
+                                    </Col>
+                                </Row>
+                            </Container>
                         </div>
                     )}
                 </Container>
