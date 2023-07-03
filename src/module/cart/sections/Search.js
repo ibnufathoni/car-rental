@@ -162,9 +162,8 @@ export default function Search(){
                     ) : (
                         <div id="cardDetail">
                             <Container className="container">
-                                <Row className="row justify-content-between"
-                                     style={{width: "1047px", marginLeft: "auto", marginRight: "auto"}}>
-                                    <Col md="8" className="col-md-8 m-0 p-0 detail-package">
+                                <Row className="row justify-content-md-between flex-wrap">
+                                    <Col md="8" className="col-md-8 m-md-0 p-md-0 detail-package">
                                         <p className="fw-bold text-capitalize ms-3 mt-2">tentang paket</p>
                                         <p className="fw-bold text-capitalize ms-3">include</p>
                                         <ul>
@@ -202,7 +201,7 @@ export default function Search(){
                                             <li className="text-secondary">Tidak termasuk akomodasi penginapan</li>
                                         </ul>
                                     </Col>
-                                    <Col md="4" className="col-md-4 m-0 p-0 car-detail justify-content-end">
+                                    <Col md="4" className="col-md-4 m-md-0 p-md-0 car-detail justify-content-md-end">
                                         <Card className="card card-detail border-1">
                                             <img src={detailData.image} className="card-img-top" alt="..."/>
                                             <CardBody className="card-body">

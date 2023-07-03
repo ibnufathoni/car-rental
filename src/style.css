@@ -729,8 +729,29 @@ select {
   margin-bottom: 0.3rem;
 }
 .car-detail {
-  width: 405px !important;
+  width: 405px!important;
 }
 #cardDetail .card{
   border: 1.5px solid #d9d9da !important;
+}
+#cardDetail .row {
+width: 1047px; margin-left: auto; margin-right: auto
+}
+@media screen and (max-width: 768px) {
+  .detail-package {
+    width: auto !important;
+    margin-bottom: 1rem !important;
+    padding-top: 0.1rem !important;
+    padding-left: 0.1rem !important;
+  }
+  #cardDetail .car-detail {
+    margin-top: 1.5rem !important;
+    display: flex !important;
+    width: auto !important;
+  }
+  #cardDetail .row {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto
+  }
 }
