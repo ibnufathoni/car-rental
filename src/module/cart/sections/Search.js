@@ -93,7 +93,7 @@ export default function Search(){
                                 </FormGroup>
                                 <FormGroup className="my-3 input-grup align-content-center justify-content-center">
                                     <Label htmlFor="kapasitas" className="form-label">Kategori</Label>
-                                    <Input type="select" id="kapasitas" className="form-select text-secondary" onChange={e=>setCategory(e.target.value)}>
+                                    <Input type="select" id="kapasitas" className="form-select text-secondary" disabled={isSubmitted} onChange={e=>setCategory(e.target.value)}>
                                         <option hidden >Masukkan Kapasitas Mobil</option>
                                         <option className="text-black" value="small">2 - 4 orang</option>
                                         <option className="text-black" value="medium">4 - 6 orang</option>
