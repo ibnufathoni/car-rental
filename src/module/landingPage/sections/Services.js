@@ -1,14 +1,14 @@
-import {Row, Container, Col} from "reactstrap";
+import {Row, Container, Col, List} from "reactstrap";
 
 export default function Services() {
     return (
         <section id="services" className="hidden">
             <Container className="container">
                 <Row className="row">
-                    <Col md={6} className="col-md-6 services-image align-self-center">
+                    <Col md="6" className="col-md-6 services-image align-self-center">
                         <img src="/img/img_service.png" alt="Service" className="w-100"/>
                     </Col>
-                    <Col md={6} className="col-md-6 ps-md-5 services-detail">
+                    <Col md="6" className="col-md-6 ps-md-5 services-detail">
                         <h4 className="services-title">
                             Best Car Rental for any kind of trip in (Bekasi)!
                         </h4>
@@ -18,13 +18,13 @@ export default function Services() {
                             pelayanan terbaik untuk perjalanan wisata, bisnis, wedding,
                             meeting, dll.
                         </p>
-                        <ul className="p-0">
+                        <List className="p-0">
                             <ServicesDetail title="Sewa Mobil Dengan Supir di Bali 12 Jam"/>
                             <ServicesDetail title="Sewa Mobil Lepas Kunci di Bali 12 Jam"/>
                             <ServicesDetail title="Sewa Mobil Jangka Panjang Bulanan"/>
                             <ServicesDetail title="Gratis Antar - Jemput Mobil di Bandara"/>
                             <ServicesDetail title="Layanan Airport Transfer / Drop In Out"/>
-                        </ul>
+                        </List>
                     </Col>
                 </Row>
             </Container>

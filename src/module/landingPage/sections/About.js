@@ -5,7 +5,7 @@ export default function About() {
         <section id="about" className="hidden">
             <Container className="container">
                 <Row className="row">
-                    <Col md={12} className="col-md-12">
+                    <Col md="12" className="col-md-12">
                         <h3 className="about-title text-capitalize">why us</h3>
                         <p className="about-text">Mengapa harus pilih Binar Car Rental?</p>
                     </Col>
@@ -34,7 +34,7 @@ export default function About() {
 
 function Card({img, title, text}) {
     return (
-        <Col md={3} className="col-md-3 hidden">
+        <Col md="3" className="col-md-3 hidden">
             <div className="card border-2">
                 <img src={img} className="card-img-top" alt=""/>
                 <div className="card-body p-0">

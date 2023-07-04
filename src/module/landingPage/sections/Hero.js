@@ -5,7 +5,7 @@ export default function Hero() {
         <section id="hero" className="">
             <Container fluid className="container-fluid overflow-hidden h-auto">
                 <Row className="row">
-                    <Col md={6} className="col-md-6 align-self-center">
+                    <Col md="6" className="col-md-6 align-self-center">
                         <h3 className="hero-title">
                             Sewa & Rental Mobil Terbaik di kawasan (Bekasi)
                         </h3>
@@ -16,9 +16,9 @@ export default function Hero() {
                             <br/>
                             untuk sewa mobil selama 24 jam
                         </p>
-                        <a href="/search.html" className="text-capitalize hero-btn">mulai sewa mobil</a>
+                        <a href="/cart" className="text-capitalize hero-btn">mulai sewa mobil</a>
                     </Col>
-                    <Col md={6} className="col-md-6 m-0 p-0">
+                    <Col md="6" className="col-md-6 m-0 p-0">
                         <img src="/img/car-banner.png" className="" alt="Car Banner"/>
                     </Col>
                 </Row>

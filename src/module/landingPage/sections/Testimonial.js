@@ -5,7 +5,7 @@ export default function Testimonial(){
         <section id="testimonial" className="hidden">
             <Container fluid className="container-fluid">
                 <Row className="row">
-                    <Col md={12} className="col-md-12 text-center">
+                    <Col md="12" className="col-md-12 text-center">
                         <h3 className="testimonial-title text-capitalize">testimonial</h3>
                         <p className="testimonial-text">
                             Berbagai review positif dari pelanggan kami

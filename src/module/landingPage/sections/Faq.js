@@ -5,7 +5,7 @@ export default function Faq() {
         <section id="faq" className="hidden">
             <Container className="container">
                 <Row className="row">
-                    <Col md={5} className="col-md-5">
+                    <Col md="5" className="col-md-5">
                         <h4 className="text-capitalize fw-bold faq-title">
                             Frequently Asked Question
                         </h4>
@@ -13,7 +13,7 @@ export default function Faq() {
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, dolores.
                         </p>
                     </Col>
-                    <Col md={7} className="col-md-7">
+                    <Col md="7" className="col-md-7">
                         <FaqDetail
                             id="collapseOne"
                             target="#collapseOne"
