@@ -683,6 +683,10 @@ select {
   }
 }
 
+
+#cardDetail {
+    margin-bottom: 283px;
+}
 .detail-package {
   width: 605px !important;
   border: 2px solid #d9d9da !important;

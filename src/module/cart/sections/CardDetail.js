@@ -10,11 +10,11 @@ export default function CardDetail({detailData}) {
 
     const mappingCategory = (value) => {
         switch (value) {
-            case 'low':
+            case 'small':
                 return '2 - 4 orang'
             case 'medium':
                 return '4 - 6 orang'
-            case 'high':
+            case '6 - 8 orang':
                 return '6 - 8 orang'
             default:
                 return ''
@@ -84,7 +84,7 @@ export default function CardDetail({detailData}) {
                                 <CardSubtitle className="d-flex align-items-center m-0 p-0">
                                     <img src="/img/ic_users.svg" className="pe-2" alt=""/>
                                     <CardText
-                                        className="m-0 p-0 text-secondary fw-bold fs-6">{mappingCategory(detailData.category)}</CardText>
+                                        className="m-0 p-0 text-secondary fw-bold fs-6">{mappingCategory(detailData.category).toLowerCase()}</CardText>
                                 </CardSubtitle>
                                 <div className="d-flex justify-content-between fw-bold mt-5 mb-3">
                                     <CardText className="text-capitalize">total</CardText>
