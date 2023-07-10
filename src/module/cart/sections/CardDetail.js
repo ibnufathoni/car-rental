@@ -9,22 +9,19 @@ export default function CardDetail({detailData}) {
     }
 
     const mappingCategory = (value) => {
-        switch (value) {
-            case 'small':
-                return '2 - 4 orang'
-            case 'medium':
-                return '4 - 6 orang'
-            case '6 - 8 orang':
-                return '6 - 8 orang'
-            default:
-                return ''
+        if (value === 'small' || value === '2-4 orang'){
+            return '2 - 4 orang';
+        } else if (value === 'medium'  || value === '4-6 orang'){
+            return '4 - 6 orang';
+        } else if (value === 'big'  || value === '6-8 orang') {
+            return '6 - 8 orang';
         }
     }
     return (
-        <div id="cardDetail">
+        <section id="cardDetail">
             <Container className="container">
                 <Row className="row justify-content-md-between flex-wrap">
-                    <Col md="8" className="col-md-8 m-md-0 p-md-0 detail-package">
+                    <Col md={8} className="col-md-8 m-md-0 p-md-0 detail-package">
                         <p className="fw-bold text-capitalize ms-3 mt-2">tentang paket</p>
                         <p className="fw-bold text-capitalize ms-3">include</p>
                         <List>
@@ -75,16 +72,16 @@ export default function CardDetail({detailData}) {
                             <li className="text-secondary">Tidak termasuk akomodasi penginapan</li>
                         </List>
                     </Col>
-                    <Col md="4" className="col-md-4 m-md-0 p-md-0 car-detail justify-content-md-end">
+                    <Col md={4} className="col-md-4 m-md-0 p-md-0 car-detail justify-content-md-end">
                         <Card className="card card-detail border-1">
-                            <img src={detailData.image} className="card-img-top" alt="..."/>
+                            <img src={detailData.image??"/img/no-image.png"} className="card-img-top" alt="car pict"/>
                             <CardBody className="card-body">
                                 <CardTitle
-                                    className="card-type fw-bold fs-6 m-0 p-0">{detailData.name}</CardTitle>
+                                    className="card-type fw-bold fs-6 m-0 p-0 text-capitalize">{detailData.name}</CardTitle>
                                 <CardSubtitle className="d-flex align-items-center m-0 p-0">
-                                    <img src="/img/ic_users.svg" className="pe-2" alt=""/>
+                                    <img src="/img/ic_users.svg" className="pe-2" alt="users-icon"/>
                                     <CardText
-                                        className="m-0 p-0 text-secondary fw-bold fs-6">{mappingCategory(detailData.category).toLowerCase()}</CardText>
+                                        className="m-0 p-0 text-secondary fw-bold fs-6 car-category">{mappingCategory(detailData.category)}</CardText>
                                 </CardSubtitle>
                                 <div className="d-flex justify-content-between fw-bold mt-5 mb-3">
                                     <CardText className="text-capitalize">total</CardText>
@@ -95,6 +92,6 @@ export default function CardDetail({detailData}) {
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </section>
     )
 }

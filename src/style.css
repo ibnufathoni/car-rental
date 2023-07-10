@@ -669,6 +669,11 @@ select {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
   transform: scale(1.02);
 }
+img[src*="/img/no-image.png"] {
+  width: 50% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media screen and (max-width: 768px) {
   .hero-result {
     height: auto !important;
@@ -700,6 +705,10 @@ select {
 .car-detail {
   width: 405px!important;
 }
+.card-detail .car-category {
+  font-size: 13px !important;
+  font-family: Arial !important;
+}
 #cardDetail .card{
   border: 2px solid #d9d9da !important;
 }
@@ -716,9 +725,9 @@ width: 1047px;
     padding-left: 0.1rem !important;
   }
   #cardDetail .car-detail {
-    margin-top: 1.5rem !important;
-    display: flex !important;
-    width: auto !important;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   #cardDetail .row {
     width: auto !important;

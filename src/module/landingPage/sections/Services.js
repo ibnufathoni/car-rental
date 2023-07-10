@@ -5,10 +5,10 @@ export default function Services() {
         <section id="services" className="hidden">
             <Container className="container">
                 <Row className="row">
-                    <Col md="6" className="col-md-6 services-image align-self-center">
-                        <img src="/img/img_service.png" alt="Service" className="w-100"/>
+                    <Col md={6} className="col-md-6 services-image align-self-center">
+                        <img src="/img/img_service.png" alt="service" className="w-100"/>
                     </Col>
-                    <Col md="6" className="col-md-6 ps-md-5 services-detail">
+                    <Col md={6} className="col-md-6 ps-md-5 services-detail">
                         <h4 className="services-title">
                             Best Car Rental for any kind of trip in (Bekasi)!
                         </h4>
@@ -35,7 +35,7 @@ export default function Services() {
 function ServicesDetail({title}) {
     return (
         <li className="list-unstyled">
-            <img src="/img/ic-centang.svg" alt=""/>
+            <img src="/img/ic-centang.svg" alt="clear-icon"/>
             <p className="services-benefit d-inline-block ms-1">
                 {title}
             </p>

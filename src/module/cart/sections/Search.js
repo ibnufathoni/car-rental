@@ -20,7 +20,7 @@ export default function Search() {
             {isLoading ? (
                 <h1>Loading...</h1>
             ) : !isClick ? (
-                <div id="cardResult">
+                <section id="cardResult">
                     <Container className="container">
                         <Row className="row justify-content-center">
                             {data.map(car => {
@@ -32,7 +32,7 @@ export default function Search() {
                             })}
                         </Row>
                     </Container>
-                </div>
+                </section>
             ) : (
                 <CardDetail detailData={detailData}/>
             )}

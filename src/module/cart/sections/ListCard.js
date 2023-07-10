@@ -22,11 +22,12 @@ export default function ListCard({id, name, image, price, setIsClick, setDetailD
         fetchDataDetail(id);
     }
     return (
-    <Col md="4" className="col-md-4 m-0 p-0">
+    <Col md={4} className="col-md-4 m-0 p-0">
         <Card className="card card-result border-1" style={{width: "21rem"}}>
-            <img src={image} className="card-img-top" alt={name}/>
+            {/*{image?<img src={image} className="card-img-top" alt={name}/>: `${name}`}*/}
+            <img src={image??"/img/no-image.png"} className="card-img-top" alt={name}/>
             <CardBody className="card-body">
-                <CardTitle className="card-type">{name}</CardTitle>
+                <CardTitle className="card-type text-capitalize">{name}</CardTitle>
                 <CardSubtitle tag="h5"
                               className="card-title fw-bold">{formatToIDR(price)} /
                     hari</CardSubtitle>
